@@ -1,0 +1,52 @@
+Recursion
+
+1. In your own words, what is recursion?
+When in order to resolve a problem you need to make a function that calls itself.
+
+2. Why is it necessary to have a base case?
+Because the function needs to know when it has to stop, so it will return the result of the expresion that it's evaluating. 
+
+Graph
+
+1. What is a graph?
+It's a data structure very similar to a Tree, except they can contain loops. 
+
+2. How is a graph different from a tree?
+By two things. Graphs can have loops, and graphs can have independents nodes if it's necessary for the data
+
+3. Give an example of something that would be good to model with a graph.
+Relationships in LinkedIn. You can have a graph for your collegues in one structure and another for your conexions for school, and so on. So, you don't need the constrains of a Tree to organize this data. 
+
+Performance
+
+Fill in the runtimes for the following actions for the table below:
+
+Data Structure                  Index   Search  Add-R   Add-L   Pop-L   Pop-R
+
+Python List (Array)             O(1)    O(n)    O(1)     O(n)    O(n)   O(1)  
+Linked List                     O(n)    O(n)    O(1)     O(1)    O(1)   O(n)
+Doubly-Linked List              O(n)    O(n)    O(1)     O(1)    O(1)   O(1)
+       
+Queue (as Array)                    X   X       O(1)       X     O(n)    X
+Queue (as LL or DLL)                X   X       O(1)       X     O(1)    X
+Stack (as Array, LL, or DLL)        X   X       O(1)       X       X    O(1)
+Deque (as DLL)                      X   X       O(1)      O(1)   O(1)   O(1)
+
+Data Structure          Get     Add     Delete  Iterate     Memory
+
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)        medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(n log n)  medium        
+Binary Search Tree      O(log n)O(log n)O(log n)O(n)        small     
+Tree                    O(n)    O(1)    O(1)    O(n)        small
+
+Sorting
+
+1. Describe in words how the Bubble Sort algorithm works
+Bubble sort sorted a pair of numbers at the time. So, you start to the left of your list, and you sorted the first pair of numbers. The second pair of numbers will include the last one of the previous pair. At the end of the first round of pairs in the length of the list, the only that you accomplish is that the last number in the list is in order. After that, you need to do the bubble sort again, in order to have all numbers in the right spot. 
+
+2. Describe in words how the Merge Sort algorithm works
+The merge sort works in two different moments. First, you make a function that combines two sorted lists in just one sorted list. This function will only work if the two lists that it receives are sorted. So, in order to make sure that the original list that you wanted to sort could pass that mandatory request, you have to make the first function, using recursion, that takes a list, and split that list in two, until the two list that returns are sorted. Is in that moment that you can call you original function, to actually make the merge part.
+
+3. Describe in words how the Quick Sort algorithm works
+The quick sort works with the idea of making a partition of the original list in order to be able to sort. So, first, you choose your pivot and then you move all the data lower than the pivot to the beginning of the list, and move all the data bigger than the pivot to the end of the list. So, in this first interaction, your pivot is in the right place. And then you use recursion to make the same process with each part of the list 
+
